@@ -1,0 +1,61 @@
+import React from 'react'
+import { View, TextInput, Text, Button } from 'react-native'
+import generalStyle from '../styles/generalStyle'
+
+const AddItem = ({ textInput, handleChangeText, handleOnPress }) => {
+
+    return (
+        <View>
+        <Text style={generalStyle.mainText}>Hola! Elabora una lista de tares</Text>
+        <TextInput 
+          style={generalStyle.input} 
+          value={textInput}
+          placeholder="Tarea" 
+          onChangeText={handleChangeText}
+        />
+        <Button 
+          title="AGREGAR" 
+          onPress={handleOnPress}
+        />
+      </View>
+    )
+
+}
+
+/* const styles = StyleSheet.create({
+    container: {
+      flex: 1,
+      marginTop: 50,
+      backgroundColor: '#fff',
+      alignItems: 'center',
+      justifyContent: 'center',
+    },
+    input: {
+      borderBottomColor: 'violet',
+      borderBottomWidth: 1,
+      marginBottom: 3
+    },
+    mainText: {
+      color: "darkcyan",
+      fontWeight: "bold",
+      fontSize: 20,
+    },
+    subText: {
+      color: "black",
+      margin:5,
+      fontStyle: "italic",
+      fontSize: 18
+    },
+    items: {
+      width:250,
+      padding: 25,
+      marginVertical: 15,
+      backgroundColor: "seashell",
+      borderColor: "violet",
+      borderWidth: 1.5,
+      flexDirection: "row",
+      justifyContent: "space-between",
+    }
+  }); */
+
+export default AddItem
